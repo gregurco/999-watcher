@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>999 Watcher - Options</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/ladda-bootstrap/ladda-themeless.min.css" rel="stylesheet">
+    <script src="vendor/ladda-bootstrap/spin.min.js"></script>
+    <script src="vendor/ladda-bootstrap/ladda.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-default" style="margin-top: 5px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="images/logo_big.png" style="height: 20px;">
+                </a>
+            </div>
+
+            <a href="https://999.md" target="_blank" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-link"></span> 999.md
+            </a>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-center">Links</h3>
+
+            <form class="form-horizontal" id="links_form">
+                <div id="links-container"></div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2">
+                        <button type="button" class="btn btn-primary btn-block ladda-button" data-style="zoom-in" id="save_links"><span class="ladda-label">Save</span></button>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-default btn-block" id="add_link">Add link</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="alert alert-success" id="saved_msg" role="alert" style="height: 34px; padding-top: 6px; display: none;">Saved</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+</div>
+
+<!-- Form input mockup -->
+<div id="link_mockup" style="display: none;">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Link</label>
+        <div class="col-sm-10">
+            <div class="input-group">
+                <input type="text" name="link[]" class="form-control" placeholder="Link" />
+                <span class="input-group-btn">
+                    <button class="btn btn-default delete-link" type="button">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/options.js"></script>
+</body>
+</html>

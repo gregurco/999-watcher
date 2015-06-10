@@ -1,0 +1,38 @@
+{
+  "name": "999 Watcher", // Название расширения
+  "version": "1.0", // Номер версии
+  "manifest_version": 2,
+  "description": "Extension that helps you to be in the know", // Описание расширения
+
+  "icons": {
+//    "16": "images/logo_big.png",
+//    "48": "images/logo_big.png",
+//    "128": "images/logo_big.png"
+  },
+
+  "permissions": [
+    "tabs", // Разрешить расширению работать с вкладками
+    "https://999.md/*" // Разрешить расширению обращаться к указанному адресу
+  ],
+
+  "browser_action": { // Элементы браузера
+    "default_title": "999 Watcher", // Название кнопки
+    "default_icon": "images/logo_big.png", // Иконка для кнопки
+    "default_popup": "popup.html" // Всплывающее окно
+  },
+
+  "options_page": "options.html", // Страница настроек
+
+  "background": {
+    "scripts": [
+      "vendor/jquery.min.js",
+      "vendor/bootstrap/js/bootstrap.min.js",
+      "js/options.js",
+      "js/popup.js",
+      "vendor/ladda-bootstrap/spin.min.js",
+      "vendor/ladda-bootstrap/ladda.min.js"
+    ]
+  },
+
+  "content_security_policy": "script-src 'self'; object-src 'self';"
+}

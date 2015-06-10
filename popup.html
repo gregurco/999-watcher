@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>999 Watcher - Popup</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/ladda-bootstrap/ladda-themeless.min.css" rel="stylesheet">
+    <script src="vendor/ladda-bootstrap/spin.min.js"></script>
+    <script src="vendor/ladda-bootstrap/ladda.min.js"></script>
+
+    <style>
+        .badge.active {
+            background-color: #5cb85c;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid" style="width: 400px; padding-bottom: 15px;">
+    <ul class="list-group" id="links-container" style="margin-top: 15px;"></ul>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <button class="btn btn-primary btn-block ladda-button" data-style="zoom-in" id="refresh"><span class="ladda-label">Refresh</span></button>
+        </div>
+        <div class="col-xs-6">
+            <button class="btn btn-default btn-block" id="settingsButton">Settings</button>
+        </div>
+    </div>
+
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/popup.js"></script>
+</div>
+</body>
+</html>
