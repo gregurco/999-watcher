@@ -28,6 +28,7 @@ $(function(){
         });
 
         $.when.apply($, deffs).done(function() {
+            recheckBadgeText();
             l.stop();
         });
     });
@@ -58,6 +59,7 @@ $(function(){
                                 linksArr[i].hasNew = false;
                                 localStorage['links'] = JSON.stringify(linksArr);
                                 renderLinks();
+                                recheckBadgeText();
                             })
                     )
                         .prepend(
@@ -68,6 +70,21 @@ $(function(){
                 );
             });
         }
+    }
+
+    /**
+     *
+     */
+    function recheckBadgeText() {
+        var badgeText = 0;
+
+        linksArr.forEach(function(link, i) {
+            if (linksArr[i].hasNew) {
+                badgeText++;
+            }
+        });
+
+        chrome.browserAction.setBadgeText({text: badgeText ? badgeText.toString() : ''});
     }
 
     /**
