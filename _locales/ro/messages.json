@@ -1,0 +1,23 @@
+{
+  "refresh": {
+    "message": "Actualizează"
+  },
+  "settings": {
+    "message": "Setări"
+  },
+  "links": {
+    "message": "Lincurile"
+  },
+  "save": {
+    "message": "Păstreze"
+  },
+  "add_link": {
+    "message": "Adaugă link"
+  },
+  "link": {
+    "message": "Link"
+  },
+  "saved": {
+    "message": "Păstrat"
+  }
+}

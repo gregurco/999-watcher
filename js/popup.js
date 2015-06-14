@@ -91,6 +91,9 @@ $(function(){
      * Constructor
      */
     var init = function() {
+        $('#refresh_text').text(chrome.i18n.getMessage("refresh"));
+        $('#settings_text').text(chrome.i18n.getMessage("settings"));
+
         renderLinks();
     }();
 });

@@ -1,0 +1,23 @@
+{
+  "refresh": {
+    "message": "Обновить"
+  },
+  "settings": {
+    "message": "Настройки"
+  },
+  "links": {
+    "message": "Ссылки"
+  },
+  "save": {
+    "message": "Сохранить"
+  },
+  "add_link": {
+    "message": "Добавить ссылку"
+  },
+  "link": {
+    "message": "Ссылка"
+  },
+  "saved": {
+    "message": "Сохранено"
+  }
+}

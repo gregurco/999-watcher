@@ -48,7 +48,7 @@ $(function(){
             linksArr = linksArrTemp;
 
             $savedMsg.show();
-            window.setTimeout(function() { $savedMsg.alert('close'); }, 2000);
+            window.setTimeout(function() { $savedMsg.hide(); }, 2000);
 
             l.stop();
         });
@@ -80,6 +80,12 @@ $(function(){
      * Constructor
      */
     var init = function(){
+        $('#links_text').text(chrome.i18n.getMessage("links"));
+        $('#save_text').text(chrome.i18n.getMessage("save"));
+        $('#add_link_text').text(chrome.i18n.getMessage("add_link"));
+        $('.link_text').text(chrome.i18n.getMessage("link"));
+        $('#saved_text').text(chrome.i18n.getMessage("saved"));
+
         if (localStorage['links']) {
             linksArr = JSON.parse(localStorage['links']);
         }

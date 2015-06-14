@@ -1,0 +1,23 @@
+{
+  "refresh": {
+    "message": "Refresh"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "links": {
+    "message": "Links"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "add_link": {
+    "message": "Add link"
+  },
+  "link": {
+    "message": "Link"
+  },
+  "saved": {
+    "message": "Saved"
+  }
+}

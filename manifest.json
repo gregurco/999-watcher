@@ -21,6 +21,8 @@
     "default_popup": "popup.html" // Всплывающее окно
   },
 
+  "default_locale": "ru",
+
   "options_page": "options.html", // Страница настроек
 
   "background": {
