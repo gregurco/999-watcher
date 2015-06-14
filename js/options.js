@@ -19,21 +19,21 @@ $(function(){
         linksArrTemp = [];
 
         $linksContainer.find('input[name="link[]"]').each(function() {
-            linksArrTemp.push({url: $(this).val(), lastMsg: null});
+            linksArrTemp.push({url: $(this).val(), lastMsg: null, title: ''});
         });
 
         linksArrTemp.forEach(function(linkTemp, i) {
             linksArr.forEach(function(link) {
-                if (linkTemp.url == link.url) {
-                    linkTemp.lastMsg = link.lastMsg;
+                if (linksArrTemp[i].url == link.url) {
+                    linksArrTemp[i] = link;
                 }
             });
 
-            if (!linkTemp.lastMsg) {
+            if (!linksArrTemp[i].lastMsg) {
                 deffs[i] = $.Deferred();
 
                 $.ajax({
-                    url: linkTemp.url
+                    url: linksArrTemp[i].url
                 }).done(function( data ) {
                     linksArrTemp[i].title = $(data).find('header.adsPage__header > h1').text();
                     linksArrTemp[i].lastMsg = $(data).find('.ads-list-table > tbody > tr').filter(function() {return +$(this).find('.ads-list-table-title').attr('colspan') !== 3}).first().find('.ads-list-table-favorites > a').data('ad-id');
