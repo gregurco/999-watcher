@@ -11,6 +11,7 @@
   },
 
   "permissions": [
+    "alarms",
     "tabs", // Разрешить расширению работать с вкладками
     "https://999.md/*" // Разрешить расширению обращаться к указанному адресу
   ],
@@ -27,13 +28,9 @@
 
   "background": {
     "scripts": [
-      "vendor/jquery.min.js",
-      "vendor/bootstrap/js/bootstrap.min.js",
-      "js/options.js",
-      "js/popup.js",
-      "vendor/ladda-bootstrap/spin.min.js",
-      "vendor/ladda-bootstrap/ladda.min.js"
-    ]
+      "js/background.js"
+    ],
+    "persistent": false
   },
 
   "content_security_policy": "script-src 'self'; object-src 'self';"

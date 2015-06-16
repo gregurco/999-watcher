@@ -38,6 +38,9 @@ $(function(){
         win.focus();
     });
 
+    /**
+     * Render links in popup
+     */
     function renderLinks() {
         $linksContainer.html('');
 
@@ -73,7 +76,7 @@ $(function(){
     }
 
     /**
-     *
+     * Recheck array of links and set the count of new positions to Badge
      */
     function recheckBadgeText() {
         var badgeText = 0;
@@ -95,6 +98,7 @@ $(function(){
         $('#settings_text').text(chrome.i18n.getMessage("settings"));
 
         renderLinks();
+        recheckBadgeText();
     }();
 });
 
