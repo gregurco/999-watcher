@@ -28,6 +28,7 @@
 
   "background": {
     "scripts": [
+      "vendor/jquery.min.js",
       "js/background.js"
     ],
     "persistent": false

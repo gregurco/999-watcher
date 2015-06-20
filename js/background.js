@@ -42,7 +42,6 @@ function refreshData() {
                 linksArr[i].hasNew = true;
 
                 localStorage['links'] = JSON.stringify(linksArr);
-                renderLinks();
             }
 
             deffs[i].resolve();
@@ -55,7 +54,7 @@ function refreshData() {
 }
 
 chrome.alarms.create("checkBadgeText", {'periodInMinutes': 1});
-chrome.alarms.create("refreshData", {'periodInMinutes': 10});
+chrome.alarms.create("refreshData", {'periodInMinutes': 1});
 
 chrome.alarms.onAlarm.addListener(function(alarm) {
     switch (alarm.name) {
